@@ -1,0 +1,472 @@
+<style>
+    
+    
+    /* Created by Walid Gaber */
+
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@700&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box ;
+}
+
+html{
+    font-size:10px;
+    font-family:'Amiri', sans-serif;
+}
+
+.container{
+    min-height:100vh;
+    width:100%;
+    display:flex;
+    align-items:center ;
+    justify-content:center ;
+    
+}
+ .section-title{
+    font-size:4rem;
+    font-weight:300;
+    color:black;
+    margin-bottom:10px;
+    text-transform:uppercase ;
+    letter-spacing:.2rem;
+    text-align:center;
+}
+ .section-title span{
+    color:red;
+}
+.headname h1{
+    font-size:2.5rem;
+    font-weight:300;
+    
+}
+.headname h1 span{
+    color:gold;
+}
+body{
+    background: linear-gradient(to top, 
+     rgba(242, 212, 121, 0) 0%, 
+     rgba(242, 212, 121, 0.1) 25%, 
+     rgba(242, 212, 121, 0.2) 75%, 
+     rgba(242, 212, 121, 0.3) 100%);
+}
+/* hero section*/
+#Hero {
+    background-image:url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgXJ3Fgp-GGkkgo8hG_rLG6aq9Mx5bJm42TPnDCL3uSypUZHpYYGNS7feqh2qDq_oRv4hJ1VTgf8MABxmGjTnCgXTt7J3_ux0GAEiU5-WKiyI2Q3VsLiBtlNVwRfXcCgc6MCHNQfn8i9sxEB9W-otwNiEHh4CAYf-Hn5XZu6V252kxNWdRmDStT2S-vA/s320/InShot_20220807_142058092.jpg");
+    background-size:cover;
+    background-repeat:no-repeat ;
+    background-position:topcenter;
+    position:relative;
+    z-index:1;
+    
+}
+#hero::after{content:'';
+position:absolute ;
+left:0;
+top:0;
+height:100%;
+width:100%;
+background-color:black ;
+opacity:.6;
+z-index:-1;
+    
+}
+#hero h1 {
+color:transparent;
+    align-items:center;
+    justify-content:center ;
+    display:block  ;
+    width:fit-content;
+    font-size:4rem;
+    position:relative ;
+    animation:text_Reveal .5s ease forwards;
+    animation-delay:1;  
+}
+#hero .tc{
+    text-align: center ;
+}
+#hero h1 span{
+    position:absolute ;
+    left:0;
+    top:0;
+    height:100%;
+    width:0;
+    background-color:orange;
+    animation:overlay 1s ease forwards;
+    animation-delay:.5s;
+}
+#hero h1:nth-child(1) {
+    animation:text_Reveal_first .5s ease forwards ;
+    animation-delay:1s;
+}
+
+#hero h1:nth-child(2) {
+    
+    animation:text_Reveal_name .5s ease forwards;
+    animation-delay:2s;
+}
+
+
+#hero h1:nth-child(1) span {
+    animation-delay:.5s;
+}
+
+
+#hero h1:nth-child(2) span {
+    animation-delay:1.5s;
+}
+/*end hero section*/
+/* الاقسام*/
+#aksam{
+    
+}
+#aksam .aksam{
+    flex-direction:column;
+    text-align:center ;
+    max-width:1500px;
+    margin:0 auto ;
+    padding:100px 0;
+    
+}
+
+
+#aksam .section-top p{
+    font-size:1.4rem;
+    margin-top:5px;
+    line-height:2.5rem;
+    font-weight:300;
+    letter-spacing:.05;
+    
+}
+#aksam .section-bottom{
+    display:flex;
+    align-items:center ;
+    justify-content:center ;
+    flex-wrap:wrap;
+}
+#aksam .section-item{
+    flex-basis:80%;
+    color:white;
+    display:flex;
+    align-items:right ;
+    justify-content:center ;
+    flex-direction:column;
+    padding:30px;
+    border-radius:10px;
+    background-image:url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgXJ3Fgp-GGkkgo8hG_rLG6aq9Mx5bJm42TPnDCL3uSypUZHpYYGNS7feqh2qDq_oRv4hJ1VTgf8MABxmGjTnCgXTt7J3_ux0GAEiU5-WKiyI2Q3VsLiBtlNVwRfXcCgc6MCHNQfn8i9sxEB9W-otwNiEHh4CAYf-Hn5XZu6V252kxNWdRmDStT2S-vA/s320/InShot_20220807_142058092.jpg");
+    background-size:cover;
+    background-position:top-center;
+    margin:10px 5%;
+    z-index:1;
+    position:relative ;
+    overflow:hidden ;
+    
+}
+
+#aksam .section-item::after{
+    content:'';
+    position:absolute ;
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    background-color:black;
+    opacity:.6;
+    z-index:-1;
+}
+
+#aksam .section-item  h2{
+font-size:2rem;
+text-align:left ;
+margin-bottom:10px;
+justify-content:left;
+    
+}
+#aksam .section-item p{
+    text-align:left ;
+    font-size:1.2rem;
+    line-height:1.9rem;
+}
+
+#aksam .section-bottom .icon{
+    height:80px;
+    width:80px;
+    margin-bottom:20px;
+}
+#aksam .section-bottom .icon img{
+    height:100%;
+    width:100%;
+    object-fit:cover;
+    z-index:-1;
+}
+/* نهاية الاقسام*/
+
+/*تواصل معنا*/
+#contact .contact{
+   flex-direction:column;
+   max-width:1200px;
+   margin:0 auto ;
+}
+#contact .contact-boxs{
+    width:300px;
+    
+}
+#contact .contact-box{
+    padding:10px;
+    width:80%;
+    align-items:center;
+    border-radius:10px;
+    padding:20px;
+    margin:30px;
+    display:flex;
+    align-items:center ;
+    text-align:center ;
+    justify-content:center ;  
+    flex-direction:column;      
+    box-shadow:0 0 20px 0 #0000002c;
+    transition:.3s ease box-shadow ;
+}
+#contact .contact-box:hover {
+    box-shadow:0 0 5px 0 #000000cc;
+}
+#contact .contact-box .icon{
+margin:0 auto;
+margin-bottom:5px;
+    
+}
+#contact .contact-info h1{
+    font-size:2.5rem;
+    font-weight:500;
+    margin-bottom:5px;
+}
+
+#contact .contact-info p{
+    font-size:1.3rem;
+    font-weight:200;
+}
+
+
+/*نهاية تواصل معنا*/
+
+/*التذيل*/
+#footer{
+    background-color:cadetblue;
+}
+#footer .footer{
+    flex-direction:column;
+    min-height:200px;
+    padding-top:50px;
+    padding-bottom:10px;
+}
+#footer .footer h2{
+    font-size:1.8rem;
+    font-weight:500;
+    letter-spacing:.1rem;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+#footer .social-icons {
+    display:flex;   
+    margin-bottom:30px;
+}
+#footer .social-icon{
+    margin:0 10px;
+}
+#footer .social-icon img{
+    filter:grayscale(1);
+    transition:.3s ease filter;
+}
+#footer .social-icon:hover img{
+    filter:grayscale(0);
+}
+#footer p{
+font-weight:50;
+    color:crimson;
+}
+.me{
+    border-radius:2px;
+    border:2px dashed  red;
+    padding:3px;
+}
+/*نهاية التذيل*/
+
+
+/*keyfarmes*/
+
+@keyframes overlay{
+    50%{width:100%;
+    left:0;}
+    100%{
+        left:100%;
+        width:0;
+    }
+}
+@keyframes text_Reveal{
+    100%{color:white;}
+    }
+    
+@keyframes text_Reveal_name {
+    100%{
+        color:gold;
+        text-shadow:3px 2px 1px black;
+    }
+}
+@keyframes text_Reveal_first {
+    100%{
+        color:white;
+        text-shadow:3px 2px 1px black;
+    }
+}
+
+/*end keyfarmes*/
+</style>
+
+<!-- Created by Walid Gaber -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>University Students Association Bahubal</title>
+    <meta name="description " content="تؤهلك الاكادghhffgيمية لتصبح....... " >
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+    
+    <meta name="Robots" 
+    content="index,follow">
+    <link rel="icon"   href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgXJ3Fgp-GGkkgo8hG_rLG6aq9Mx5bJm42TPnDCL3uSypUZHpYYGNS7feqh2qDq_oRv4hJ1VTgf8MABxmGjTnCgXTt7J3_ux0GAEiU5-WKiyI2Q3VsLiBtlNVwRfXcCgc6MCHNQfn8i9sxEB9W-otwNiEHh4CAYf-Hn5XZu6V252kxNWdRmDStT2S-vA/s320/InShot_20220807_142058092.jpg"></link>
+    <body>
+        <section id="Hero">
+            <div class="Hero container">
+                <div>
+                   <h1 class="tc">University Students<span></span> </h1>
+                    <h1>Association Bahubal<span></span></h1>
+                </div>
+            </div>
+        </section>
+      
+       <!--الاقسام-->
+       
+       <section id="aksam">
+           <div class="aksam container">
+           <div class="section-top">
+            
+         <h1 class="section-title" >US<span>EB</span></h1>
+         <h2>University Students' Association Bahubal 16th Executive Committee (2022-23)
+         </h2>
+                   
+              </div> 
+           
+           <div class="section-bottom">
+           <div class="section-item">
+           <div class="icon">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjeGJ2r1nRhuPsnsda37vu0MBDfDQ02rPyS6yyjdrsbFlkMUvHVmPiGp2MPIfWa9yk_SP7Nme3X6OGkdQf40Kn-9DKrVVg2bZshrCn4GC_TDZ48SsW_ASJeF8fz4h8iVJAfaa2o7Lc4mnKDKZ0oYCk-bF0V_c4stHN74JJ8Eg2TJPyZNehSXOr8o1RqAQ/s320/InShot_20220807_152711269.jpg"/></div>
+               <h2>President- Hridoy Gope</h2>
+               <h2>Studies at Sylhet Agricultural University</h2>
+               <p>About Hridoy</p>
+               
+              </div>
+            <div class="section-item">
+            <div class="icon">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiUyicqH6o6GVE_84NThiw1j_sWxcz_fvKyRTImy-Cs7xMCHGrb-cR38kiE3-CW_zsy5IKGnhHQYDlOWlNZYx9FAqB8Hb1D6mDiIKf4lcZ2efLutA0rvTNL9ANWxzmGWPKRqGAYfX1toz-hgDooRo2lQxez_OGTOulrbGryjIYF0APxZO4cDEW77waqig/s320/InShot_20220807_141519922.jpg"/></div>
+               <h2>الحديث</h2>
+               <p> تعريفة:مجموعات من أقوال وتعاليم النبي محمد.
+         </p><p>  مكانة الحديث:تعتبر السنة أو الحديث عند أهل السنة والجماعة هما المصدر الثاني للتشريع في الإسلام بعد القرآن،  فمكانة السنة رفيعة ولها قوة تشريعية ملزمة، واتباعها واجب، وعليها يقوم جزء كبير من كيان الشريعةتعتبر السنة أو الحديث عند أهل السنة والجماعة هما المصدر الثاني للتشريع في الإسلام بعد القرآن،  فمكانة السنة رفيعة ولها قوة تشريعية ملزمة، واتباعها واجب،وعليها يقوم جزء كبير من كيان الشريعة.</p>
+         </div>
+           
+            <div class="section-item">
+                <div class="icon">
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSzu3p3oZJGx2RDomWgLVyCENc3x___wa_0uw&usqp=CAU"/></div>
+               <h2>العقيدة</h2>
+               <p> العقيدة بمعنى الاعتقاد، فهي التصديق والجزم دون شك، أي الإيمان. </p><p>
+               
+              تنبع العقيدة من الدين، ونظرًا لأهمية العقيدة الإسلامية وضرورة ثباتها فلها مصدران رئيسان، هما أساس الدين: القرآن الكريم (كلام الله)، والأحاديث الواردة عن النبي .</p>
+              </div>
+            <div class="section-item">
+            <div class="icon">
+               <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Quran2.png"/></div>
+               <h2>علم التفسير</h2>
+               <p> علم التفسير هو توضيح الشيء وبيان معناه، وهو علم اهتم به المسلمون لفهم آيات القرآن. </p>
+                   
+               <p> فضل علم التفسير: يُعدّ علم التفسير من العلوم الشريفة، وذلك لما فيه من البركة والمعرفة بمراد الله -تعالى- من كلامه الوارد في القرآن الكريم، كما أنّ حاجة الأُمّة إليه كبيرة، وقد كان لأهل التفسير الشرف والرفعة؛ لأنّ الناس ترجع إليهم في فهم كلام الله -تعالى- والمقصود منه. </p>
+           </div>
+               </div>
+           </div>
+           </div>
+           
+       </section>
+       <!--نهاية الاقسام-->
+       
+       <!--تواصل معنا-->
+       <section id="contact">
+           <div class="contact container">
+             <h1 class="section-title">تواصل<span> معنا</span></h1>  
+             <div class="contact-boxs">
+                 <div class="contact-box">
+        <div class="icon">        
+     <img src="https://img.icons8.com/clouds/100/000000/email.png"/>                </div>
+                 <div class="contact-info">
+                 <h1>الايميل</h1>
+                 <p>sololearn@gmail.com</p>
+                     
+                 </div>
+                 </div>
+                 
+                 <div class="contact-box">
+        <div class="icon">         
+    <img src="https://img.icons8.com/clouds/100/000000/map.png"/>                 </div>
+                 <div class="contact-info">
+                 <h1>العنوان</h1>
+                     <p>فوق سطح الواد حمادة</p>
+                 </div>
+                 </div>
+                 
+                 <div class="contact-box">
+   <div class="icon"> <img src="https://img.icons8.com/clouds/100/000000/phone.png"/>    
+     </div>
+                 <div class="contact-info">
+         <h1>رقم الهاتف</h1>     
+         <p>+201000000000</p>    
+         <p>+201111111111</p>   
+                 </div>
+                 
+                </div> 
+             </div>
+           </div>        
+       </section>
+       <!--نهاية تواصل معنا-->
+       
+       <!--التذيل-->
+       <section id="footer">
+       <div class="footer container">
+       <div class="headname">
+ <h1> أكاديمية<span> نور </span>الإسلام</h1>       
+       </div>
+       <h2>للتواصل معنا عن طريق السوشيال ميديا</h2>
+        <div class="social-icons">
+       <div class="social-icon">
+       <a href="#"><img src="https://img.icons8.com/color/48/000000/facebook-new.png"/></a>
+           
+       </div>
+        <div class="social-icon">
+       <a href="#"><img src="https://img.icons8.com/color/48/000000/twitter.png"/></a>
+           
+       </div>
+       
+           <div class="social-icon">
+       <a href="#"><img src="https://img.icons8.com/color/48/000000/instagram-new.png"/></a>
+           
+       </div>
+        <div class="social-icon">
+       <a href="#"><img src="https://img.icons8.com/color/48/000000/linkedin-circled.png"/></a>
+           
+       </div>
+       </div>
+    
+       <p class="me">made by walid gaber</p>
+         </div>  
+       </section>
+      
+    </body>
+</html>
+
